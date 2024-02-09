@@ -52,7 +52,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :name)
   end
 
-  def set_user # set user variable for show, update and destroy, remove user = User.find(params[:id]) and replace with @user.destroy
+  # ****set user variable for show, update and destroy, remove user = User.find(params[:id]) and replace with @user.destroy
+  def set_user 
     @user = User.find(params[:id])
   end
 end
