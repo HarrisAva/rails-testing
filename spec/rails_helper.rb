@@ -31,6 +31,8 @@ begin
 rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
+
+# ** adding this code to use Factory bot ****
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
